@@ -20,18 +20,22 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooper/proprietary/libcamera.so:obj/lib/libcamera.so
     
 PRODUCT_COPY_FILES += \
-    vendor/samsung/cooper/proprietary/gps.msm7k.so:system/vendor/lib/hw/gps.cooper.so \
+    vendor/samsung/cooper/proprietary/gps.cooper.so:system/lib/hw/gps.cooper.so \
     vendor/samsung/cooper/proprietary/sensors.default.so:system/lib/hw/sensors.default.so \
+    vendor/samsung/cooper/proprietary/lights.cooper.so:system/lib/hw/lights.cooper.so \
     vendor/samsung/cooper/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     vendor/samsung/cooper/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/samsung/cooper/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     vendor/samsung/cooper/proprietary/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
     vendor/samsung/cooper/proprietary/libgsl.so:system/lib/libgsl.so \
-    vendor/samsung/cooper/proprietary/gpsd:system/vendor/bin/gpsd \
+    vendor/samsung/cooper/proprietary/gpsd:system/bin/gpsd \
     vendor/samsung/cooper/proprietary/rild:system/bin/rild \
+    vendor/samsung/cooper/proprietary/BCM2049C0_003.001.031.0088.0094.hcd:system/bin/BCM2049C0_003.001.031.0088.0094.hcd \
+    vendor/samsung/cooper/proprietary/get_macaddrs:system/bin/get_macaddrs \
     vendor/samsung/cooper/proprietary/libril.so:system/lib/libril.so \
     vendor/samsung/cooper/proprietary/libsec-ril.so:system/lib/libsec-ril.so \
     vendor/samsung/cooper/proprietary/libsecril-client.so:system/lib/libsecril-client.so \
+    vendor/samsung/cooper/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
     vendor/samsung/cooper/proprietary/libmmipl.so:system/lib/libmmipl.so \
     vendor/samsung/cooper/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
     vendor/samsung/cooper/proprietary/liboemcamera.so:system/lib/liboemcamera.so \
@@ -45,26 +49,28 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooper/proprietary/libPanoraMax1.so:system/lib/libPanoraMax1.so \
     vendor/samsung/cooper/proprietary/libActionShot.so:system/lib/libActionShot.so \
     vendor/samsung/cooper/proprietary/libPlusMe.so:system/lib/libPlusMe.so \
-    vendor/samsung/cooper/proprietary/BCM2049C0_003.001.031.0088.0094.hcd:system/bin/BCM2049C0_003.001.031.0088.0094.hcd \
-    vendor/samsung/cooper/proprietary/libs3cjpeg.so:system/lib/libs3cjpeg.so\
-    vendor/samsung/cooper/proprietary/memsicd:system/vendor/bin/memsicd
-
-PRODUCT_COPY_FILES += \
-    vendor/samsung/cooper/proprietary/firmware/cfg.dat:system/etc/firmware/wlan/cfg.dat \
-    vendor/samsung/cooper/proprietary/firmware/qcom_cfg.ini:system/etc/firmware/wlan/qcom_cfg.ini \
-    vendor/samsung/cooper/proprietary/firmware/qcom_fw.bin:system/etc/firmware/wlan/qcom_fw.bin \
-    vendor/samsung/cooper/proprietary/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    vendor/samsung/cooper/proprietary/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
-
-PRODUCT_COPY_FILES += \
-    vendor/samsung/cooper/proprietary/wifi/ar6000.ko:system/wifi/ar6000.ko \
-    vendor/samsung/cooper/proprietary/wifi/ath6k/AR6003/hw2.0/athtcmd_ram.bin:system/wifi/ath6k/AR6003/hw2.0/athtcmd_ram.bin \
-    vendor/samsung/cooper/proprietary/wifi/ath6k/AR6003/hw2.0/athwlan.bin.z77:system/wifi/ath6k/AR6003/hw2.0/athwlan.bin.z77 \
-    vendor/samsung/cooper/proprietary/wifi/ath6k/AR6003/hw2.0/bdata.SD31.bin:system/wifi/ath6k/AR6003/hw2.0/bdata.SD31.bin \
-    vendor/samsung/cooper/proprietary/wifi/ath6k/AR6003/hw2.0/bdata.SD31.bin.04:system/wifi/ath6k/AR6003/hw2.0/bdata.SD31.bin.04 \
-    vendor/samsung/cooper/proprietary/wifi/ath6k/AR6003/hw2.0/data.patch.bin:system/wifi/ath6k/AR6003/hw2.0/data.patch.bin \
-    vendor/samsung/cooper/proprietary/wifi/ath6k/AR6003/hw2.0/otp.bin.z77:system/wifi/ath6k/AR6003/hw2.0/otp.bin.z77
-
+    vendor/samsung/cooper/proprietary/BCM2049C0_003.001.031.0088.0094.hcd:system/etc/firmware/BCM2049C0_003.001.031.0088.0094.hcd \
+    vendor/samsung/cooper/proprietary/libaccelcal.so:system/lib/libaccelcal.so \
+    vendor/samsung/cooper/proprietary/libaccsensorcal.so:system/lib/libaccsensorcal.so \
+    vendor/samsung/cooper/proprietary/libaccsensorcaltest.so:system/lib/libaccsensorcaltest.so \
+    vendor/samsung/cooper/proprietary/libaudioeq.so:system/lib/libaudioeq.so \
+    vendor/samsung/cooper/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \
+    vendor/samsung/cooper/proprietary/libseccamera.so:system/lib/libseccamera.so \
+    vendor/samsung/cooper/proprietary/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    vendor/samsung/cooper/proprietary/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+    vendor/samsung/cooper/proprietary/sec_key.kl:system/usr/keylayout/sec_key.kl \
+    vendor/samsung/cooper/proprietary/rzscontrol:system/xbin/rzscontrol \
+    vendor/samsung/cooper/proprietary/abtfilt:system/bin/abtfilt \
+    vendor/samsung/cooper/proprietary/memsicd:system/bin/memsicd \
+    vendor/samsung/cooper/proprietary/qmuxd:system/bin/qmuxd \
+    vendor/samsung/cooper/proprietary/bdaddr_read:system/bin/bdaddr_read \
+    vendor/samsung/cooper/proprietary/patchlcs:system/bin/patchlcs \
+    vendor/samsung/cooper/proprietary/screencap:system/bin/screencap \
+    vendor/samsung/cooper/proprietary/toggleshutter:system/bin/toggleshutter \
+    vendor/samsung/cooper/proprietary/wlan_mac:system/bin/wlan_mac \
+    vendor/samsung/cooper/proprietary/wlan_tool:system/bin/wlan_tool \
+    vendor/samsung/cooper/proprietary/wmiconfig:system/bin/wmiconfig \
+    vendor/samsung/cooper/proprietary/libs3cjpeg.so:system/lib/libs3cjpeg.so
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/cooper/proprietary/OMX/libOmxEvrcEnc.so:system/lib/libOmxEvrcEnc.so \
@@ -91,4 +97,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/cooper/proprietary/OMX/libomx_avcdec_sharedlibrary.so:system/lib/libomx_avcdec_sharedlibrary.so \
     vendor/samsung/cooper/proprietary/OMX/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \
     vendor/samsung/cooper/proprietary/OMX/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \
+    vendor/samsung/cooper/proprietary/OMX/libOmxEvrcHwDec.so:system/lib/libOmxEvrcHwDec.so \
+    vendor/samsung/cooper/proprietary/OMX/libOmxOn2Dec.so:system/lib/libOmxOn2Dec.so \
+    vendor/samsung/cooper/proprietary/OMX/libOmxQcelpHwDec.so:system/lib/libOmxQcelpHwDec.so \
     vendor/samsung/cooper/proprietary/OMX/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so
